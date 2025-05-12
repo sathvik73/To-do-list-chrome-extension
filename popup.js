@@ -144,4 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     addDragAndDropHandlers();
+
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'local' && changes.tasks) {
+            tasks = changes.tasks.newValue;
+            displayTasks();
+        }
+    });
 });
