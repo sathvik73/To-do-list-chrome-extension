@@ -112,23 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             taskListUl.appendChild(li);
         });
     }
-    function startTimer() {
-        setInterval(() => {
-            if (tasks.length > 0) {
-                tasks[0].time -= 1;
-                if (tasks[0].time <= 0) {
-                    tasks.shift();
-                }
-                saveTasksToStorage();
-                displayTasks();
-            }
-        }, 60000);
-    }
-    function saveTasksToStorage() {
-        chrome.storage.local.set({ tasks: tasks });
-    }
-
-    startTimer();
+   
 
     // Drag and drop functionality
     function addDragAndDropHandlers() {
