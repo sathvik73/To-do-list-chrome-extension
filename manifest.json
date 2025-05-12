@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Task Time Adder",
+    "version": "1.0",
+    "description": "Add tasks and specify time duration (in minutes).",
+    "permissions": [
+      "storage", "alarms"
+    ],
+    "background": {
+    "service_worker": "background.js"
+  },
+
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "250": "icons/icon250.png",
+        "500": "icons/icon500.png",
+        "725": "icons/icon725.png"
+      }
+    },
+    "icons": {
+        "250": "icons/icon250.png",
+        "500": "icons/icon500.png",
+        "725": "icons/icon725.png"
+    }
+  }
